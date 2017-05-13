@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1488878980 source:c:\users\boroka\desktop\sudoku\main.cpp
+	"graphics.hpp"
+
+1488260528 c:\users\boroka\desktop\sudoku\include\graphics.hpp
+	<string>
+
