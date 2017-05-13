@@ -1,13 +1,8 @@
-#include "graphics.hpp"
-using namespace genv;
-
+#include "GameMaster.hpp"
 
 int main()
 {
-    gout.open(400,400);
-    gout <<text("hello world")<< refresh;
-    event ev;
-    while(gin >> ev) {
-    }
+    GameMaster GM = new GameMaster();
+    GM.start();
     return 0;
 }
