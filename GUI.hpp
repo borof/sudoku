@@ -9,8 +9,8 @@ private:
 
 public:
     GUI();
-    draw();
-
+    void drawGame();
+    void drawMenu();
 };
 
 #endif // GUI_HPP_INCLUDED

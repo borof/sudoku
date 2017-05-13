@@ -12,7 +12,7 @@ private:
 
 public:
     GameMaster();
-    start();
+    void start();
 };
 
 #endif // GAMEMASTER_HPP_INCLUDED
