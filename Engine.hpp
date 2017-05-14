@@ -17,8 +17,9 @@ private:
 
 public:
     Engine();
-    int getFeedback(int x, int y);
+    int getFeedback(int number, int x, int y);
     void setEveryNumber(std::vector<std::vector<int> > configFile);
+    void setEmptyNumber(std::vector<int> row, std::vector<int> col);
 };
 
 #endif // ENGINE_HPP_INCLUDED

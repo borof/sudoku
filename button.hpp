@@ -12,11 +12,11 @@ class Button : public Widget
 protected:
     string _text;
     int which;
-    event ev;
+
 public:
     Button(int x,int y,int sx,int sy,string s, int which_);
     virtual void draw() const;
-    virtual void click(int &result);
+    virtual void click(int &result, event ev);
 };
 
 

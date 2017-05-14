@@ -15,6 +15,7 @@ private:
 public:
     GameMaster(int wX, int wY, std::string window_name);
     void start();
+    void readConfig(int which);
 };
 
 #endif // GAMEMASTER_HPP_INCLUDED

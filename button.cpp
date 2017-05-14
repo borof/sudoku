@@ -6,7 +6,7 @@ using namespace std;
 
 using namespace genv;
 
-Button::Button(int x,int y,int sx,int sy,string s, int which_) : Widget(x,y,sx,sy),_text(s) {}
+Button::Button(int x,int y,int sx,int sy,string s, int which_) : Widget(x,y,sx,sy),_text(s),which(which_) {}
 void Button::draw() const
 {
     gout << move_to(_x,_y) << color(0,255,255) << box(_size_x,_size_y);
@@ -18,14 +18,13 @@ void Button::draw() const
 
 
 
-void Button::click(int &result)
+void Button::click(int &result, event ev)
 {
     if (is_selected(ev.pos_x, ev.pos_y))
     {
         if (ev.button == btn_left)
             {
                 result = which;
-                cout << result << endl;
             }
     }
 }
