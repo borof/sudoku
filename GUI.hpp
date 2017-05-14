@@ -2,34 +2,32 @@
 #define GUI_HPP_INCLUDED
 
 #include "graphics.hpp"
-#include "StaticText.hpp"
 #include "button.hpp"
-
+#include "StaticText.hpp"
 #include <string>
-#include <vector>
 #include <iostream>
-
-using namespace std;
 using namespace genv;
-
+using namespace std;
 class GUI{
 
 private:
-    std::string title;
+    string title;
     int wX, wY;
-    event ev;
-    vector <Button*> butt;
-    //int importantValues[3]; //szam x y tartalmaz
+    vector<Button*> butt;
     vector< vector<StaticText*> > butt2;
+    event ev;
 
 public:
     GUI();
-    GUI(int widthX, int widthY, std::string window_name);
-    void drawGame(int importantValues[]);
+    GUI(int widthX, int widthY, string window_name);
+    void drawGame();
     void drawMenu(int &which);
     void open();
-    void  setEv(event evv);
+    void setEv(event even);
     void clearScreen();
+    void loadDatas(vector<string> values);
+    vector<int> check(vector<string> values, vector<vector<int> > all);
+    void win();
 };
 
 #endif // GUI_HPP_INCLUDED

@@ -11,10 +11,7 @@ GameMaster::GameMaster(int widthX, int widthY, string window_name){
 
 void GameMaster::start(){
     gInterface.open();
-
     int config = -1;
-    int importantValues[] = {0, 0, 0};
-
     event ev;
 
     while(gin>>ev){
@@ -26,11 +23,17 @@ void GameMaster::start(){
         }
     }
     readConfig(config);
-
-    while(gin>>ev){
+    config = -1;
+    while(gin>>ev && !gEngine.checkWin()){
         gInterface.setEv(ev);
-        gInterface.drawGame(importantValues);
-        gout << refresh;
+        gInterface.loadDatas(gEngine.getValuesForGUI());
+        gInterface.drawGame();
+        gEngine.settingCoordinates(gInterface.check(gEngine.getValuesForGUI(), gEngine.getEveryNumber()));
+        if(gEngine.checkWin()){
+            gInterface.clearScreen();
+            gInterface.win();
+        }
+
     }
 }
 

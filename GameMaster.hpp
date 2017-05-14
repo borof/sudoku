@@ -3,7 +3,9 @@
 
 #include "GUI.hpp"
 #include "Engine.hpp"
+#include <iostream>
 
+using namespace std;
 using namespace genv;
 
 class GameMaster{
@@ -13,7 +15,7 @@ private:
     Engine gEngine;
 
 public:
-    GameMaster(int wX, int wY, std::string window_name);
+    GameMaster(int wX, int wY, string window_name);
     void start();
     void readConfig(int which);
 };

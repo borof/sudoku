@@ -11,15 +11,15 @@ class StaticText : public Widget{
 
     string _text;
     bool focus = false;
-
+    int bad_r, bad_g, bad_b;
 public:
     string GetText (){return _text;}
 
     StaticText(int,int,int,int,string);
     virtual void draw() const ;
     virtual void handle(event);
-
-   // virtual void click(int &result, event ev);
+    void setText(string str);
+    void setBadRGB(bool badass);
 };
 
 #endif // STATICTEXT_HPP_INCLUDED

@@ -1,7 +1,10 @@
 #ifndef ENGINE_HPP_INCLUDED
 #define ENGINE_HPP_INCLUDED
 #include <vector>
+#include <string>
+#include <iostream>
 
+using namespace std;
 class Engine{
 
 private:
@@ -11,15 +14,18 @@ private:
         int y = 0;
     };
 
-    std::vector<Coord> coordinates;
-    std::vector< std::vector<int> > everyNumber;
-    std::vector<int> feedback;
+    vector<Coord> coordinates;
+    vector< vector<int> > everyNumber;
+    bool win = false;
 
 public:
     Engine();
-    int getFeedback(int number, int x, int y);
-    void setEveryNumber(std::vector<std::vector<int> > configFile);
-    void setEmptyNumber(std::vector<int> row, std::vector<int> col);
+    void setEveryNumber(vector<vector<int> > configFile);
+    void setEmptyNumber(vector<int> row, vector<int> col);
+    vector<string> getValuesForGUI();
+    vector< vector<int> > getEveryNumber();
+    void settingCoordinates(vector<int> del);
+    bool checkWin();
 };
 
 #endif // ENGINE_HPP_INCLUDED
