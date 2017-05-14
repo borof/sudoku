@@ -2,7 +2,7 @@
 
 int main()
 {
-    GameMaster GM = new GameMaster();
+    GameMaster GM(600,400, "Sodoku");
     GM.start();
     return 0;
 }

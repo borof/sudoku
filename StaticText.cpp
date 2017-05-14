@@ -1,5 +1,7 @@
 #include "StaticText.hpp"
 #include "graphics.hpp"
+#include <iostream>
+
 using namespace genv;
 using namespace std;
 
@@ -15,7 +17,7 @@ void StaticText::draw() const
         gout << move_to(_x+5,_y+5+gout.cascent()) << text(_text);
 
 }
-#include <iostream>
+
 void StaticText::handle(event ev) {
     if ( ev.type == ev_key && ev.keycode >= '0' && ev.keycode <= 'z')
         {

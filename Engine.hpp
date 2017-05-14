@@ -11,14 +11,14 @@ private:
         int y = 0;
     };
 
-    vector<Coord> coordinates;
-    vector< vector<int> > everyNumber(9, vector<int>(9));
-    vector<int> feedback;
+    std::vector<Coord> coordinates;
+    std::vector< std::vector<int> > everyNumber;
+    std::vector<int> feedback;
 
 public:
     Engine();
     int getFeedback(int x, int y);
-
+    void setEveryNumber(std::vector<std::vector<int> > configFile);
 };
 
 #endif // ENGINE_HPP_INCLUDED
